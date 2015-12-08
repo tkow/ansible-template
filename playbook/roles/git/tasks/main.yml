@@ -1,0 +1,13 @@
+---
+- name: install the latest version of git
+  yum: name=git2u state=latest
+  register: result
+  ignore_errors: true
+
+- name: remove old git
+  yum: name=git state=absent
+  when: result|failed
+
+- name: install the latest version of git again
+  yum: name=git2u state=latest
+  when: result|failed

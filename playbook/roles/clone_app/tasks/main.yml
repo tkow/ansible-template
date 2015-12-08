@@ -1,0 +1,5 @@
+---
+- name: clone sample website
+  git: repo=git@git@github.com:tkow/ansible-template.git
+       dest=/home/vagrant/dev_local version=master accept_hostkey=yes
+  sudo: no

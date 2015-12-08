@@ -1,0 +1,8 @@
+---
+- name: install yum some packages for bundle install in project directory
+  yum: name={{ item }} state=latest
+  with_items:
+    - libxml2-devel
+    - libxslt-devel
+    - gcc-c++
+    - redis

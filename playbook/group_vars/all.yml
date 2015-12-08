@@ -1,0 +1,7 @@
+---
+ruby:
+  version: 2.1.0
+postgresql:
+  dbuser: "pos"
+  dbpass: "pos"
+  dbname: "local_data_base"
